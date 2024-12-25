@@ -20,8 +20,10 @@ class ServiceController extends Controller
         return view('pages.services', compact(['title', 'services', 'address', 'all_services', 'phone']));
     }
 
-    public function details ($id)
+    public function details ($slug)
     {
+        $parts = explode('-' ,$slug);
+        $id = end($parts);
         $all_services = Services::query()->get();
         $address = Settings::query()->where(['key' => 'address'])->get();
         $title = 'service';

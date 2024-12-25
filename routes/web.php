@@ -67,14 +67,14 @@ Route::get('/hakkimizda', [AboutController::class, 'index'])->name('about');
 
 Route::prefix('fidan-cesitlerimiz')->group(function () {
     Route::get('/', [FrontServices::class, 'index'])->name('front.services');
-    Route::get('/{id}', [FrontServices::class, 'details'])->name('front.services.details');
+    Route::get('/{slug}', [FrontServices::class, 'details'])->name('front.services.details');
 });
 
 Route::get('/galeri', [FrontGallery::class, 'index'])->name('front.gallery');
 
 Route::prefix('yazilarimiz')->group(function () {
     Route::get('/', [FrontBlogs::class, 'index'])->name('front.blogs');
-    Route::get('/{id}', [FrontBlogs::class, 'details'])->name('front.blogs.details');
+    Route::get('/{slug}', [FrontBlogs::class, 'details'])->name('front.blogs.details');
 });
 
 Route::get('/iletisim', [ContactController::class, 'index'])->name('contact');

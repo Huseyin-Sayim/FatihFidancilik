@@ -38,7 +38,7 @@
                                 <div class="overlay">
                                     <div class="box">
                                         <div class="content">
-                                            <a href="{{ route('front.blogs.details', ['id' => $item->id]) }}" class="thm-btn">Daha Fazla</a>
+                                            <a href="{{ route('front.blogs.details', ['slug' => $item->slug .'-'. $item->id ]) }}" class="thm-btn">Daha Fazla</a>
                                         </div>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                             <ul class="meta-info list-inline">
 
                             </ul>
-                            <h3><a href="{{ route('front.blogs.details', ['id' => $item->id]) }}">{{ $item->blog_title }}</a></h3>
+                            <h3><a href="{{ route('front.blogs.details', ['slug' => $item->slug .'-'. $item->id]) }}">{{ $item->blog_title }}</a></h3>
                             {!! substr($item->blog_text, 0 ,400) !!} ...
                         </div>
                     </div>

@@ -39,7 +39,7 @@
                                     <div class="overlay">
                                         <div class="box">
                                             <div class="content">
-                                                <a href="{{ route('front.services.details', ['id' => $item->id]) }}" class="thm-btn">Daha Fazla</a>
+                                                <a href="{{ route('front.services.details', ['slug' => $item->slug .'-'. $item->id]) }}" class="thm-btn">Daha Fazla</a>
                                             </div>
                                         </div>
                                     </div>

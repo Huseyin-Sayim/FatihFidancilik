@@ -63,7 +63,7 @@
                         <a href="{{ route('front.services') }}">Fidan Çeşitlerimiz</a>
                         <ul class="sub-menu">
                             @foreach($all_services as $item)
-                                <li><a href="{{ route('front.services.details', ['id' => $item->id]) }}">{{ $item->service_title }} Çeşitlerimiz</a></li>
+                                <li><a href="{{ route('front.services.details', ['slug' => $item->slug .'-'. $item->id]) }}">{{ $item->service_title }}</a></li>
                             @endforeach
                         </ul>
                     </li>

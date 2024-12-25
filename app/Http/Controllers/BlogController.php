@@ -21,8 +21,10 @@ class BlogController extends Controller
         return view('pages.blogs', compact(['all_services', 'address', 'title', 'blogs', 'phone']));
     }
 
-    public function details ($id)
+    public function details ($slug)
     {
+        $parts = explode('-', $slug);
+        $id = end($parts);
         $all_services = Services::query()->get();
         $address = Settings::query()->where(['key' => 'address'])->get();
         $title = 'blog';

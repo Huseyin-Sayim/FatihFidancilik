@@ -52,12 +52,12 @@
                                             <div class="overlay">
                                                 <div class="box">
                                                     <div class="content">
-                                                        <a href="{{ route('front.services.details', ['id' => $item->id]) }}" class="thm-btn">Daha Fazla</a>
+                                                        <a href="{{ route('front.services.details', ['slug' => $item->slug .'-'. $item->id] ) }}" class="thm-btn">Daha Fazla</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <h3>{{ $item->service_title }} Çeşitleri</h3>
+                                        <h3>{{ $item->service_title }}</h3>
                                         <p>{{ $item->service_intro_text }}</p>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                                     <div class="overlay">
                                         <div class="box">
                                             <div class="content">
-                                                <a href="{{ route('front.blogs.details', ['id' => $item->id]) }}" class="thm-btn">Daha Fazla</a>
+                                                <a href="{{ route('front.blogs.details', ['slug' => $item->slug .'-'. $item->id]) }}" class="thm-btn">Daha Fazla</a>
                                             </div>
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@
 
                                     </li>
                                 </ul>
-                                <h3><a href="{{ route('front.blogs.details', ['id' => $item->id]) }}">{{ $item->blog_title  }}</a></h3>
+                                <h3><a href="{{ route('front.blogs.details', ['slug' => $item->slug .'-'. $item->id]) }}">{{ $item->blog_title  }}</a></h3>
                             </div>
                         </div>
                     @endforeach
